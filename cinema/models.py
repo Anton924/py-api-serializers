@@ -106,7 +106,7 @@ class Ticket(models.Model):
         using=None,
         update_fields=None,
     ):
-        self.full_clean()
+        super().full_clean()
         self.save()
 
     def __str__(self):

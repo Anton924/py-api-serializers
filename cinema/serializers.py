@@ -21,7 +21,7 @@ class CinemaHallSerializer(serializers.ModelSerializer):
 class ActorSerializer(serializers.ModelSerializer):
     full_name = serializers.SerializerMethodField()
 
-    def get_full_name(self, obj):
+    def get_full_name(self, obj: Actor):
         return f"{obj.first_name} {obj.last_name}"
 
     class Meta:
