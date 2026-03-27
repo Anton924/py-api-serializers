@@ -47,7 +47,7 @@ class MovieSessionViewSet(viewsets.ModelViewSet):
     )
 
     def get_serializer_class(self) -> Type[
-        MovieSessionSerializer, MovieSessionListSerializer
+        MovieSessionSerializer
     ]:
         if self.action == "list":
             return MovieSessionListSerializer
