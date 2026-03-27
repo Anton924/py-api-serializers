@@ -102,7 +102,7 @@ class MovieApiTests(TestCase):
                 "actors": [1],
             },
         )
-        db_movie = Movie.objects.get(id=1)
+        db_movie = Movie.objects.get(id=1) # For now we have 2 movies in the db, one from setUp and one from there, so Watchman will have id == 2
         self.assertEqual(
             [db_movie.title, db_movie.description],
             [
